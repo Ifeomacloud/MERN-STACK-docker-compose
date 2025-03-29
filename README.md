@@ -1,5 +1,24 @@
 # A simple MERN stack application 
 
+This is a simple MERN (MongoDB, Express.js, React, Node.js) stack application. Below are the instructions for running the application both with Docker Compose and without Docker.
+
+## Run it locally without Docker
+
+## Prerequisites
+
+- Install **npm** on your machine.
+
+## Start server
+
+- cd mern/server
+- npm install
+- npm start
+
+## Start Client
+- cd mern/client
+- npm install
+- npm run dev
+
 ### Create a network for the docker containers
 
 `docker network create demo`
