@@ -30,7 +30,7 @@ services:
 
 networks:
   mern_network:
-    driver: bridge 
+    driver: bridge
 
 volumes:
   mongo-data:
