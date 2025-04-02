@@ -10,29 +10,29 @@ This is a simple MERN (MongoDB, Express.js, React, Node.js) stack application. B
 
 ## Start server
 
-- cd mern/server
-- npm install
-- npm start
+- *cd mern/server*
+- *npm install*
+- *npm start*
 
 ## Start Client
-- cd mern/client
-- npm install
-- npm run dev
+- *cd mern/client*
+- *npm install*
+- *npm run dev*
 
 ### Create a network for the docker containers
 
-- docker network create demo
+- *docker network create mern_network*
 
 ### Build the client 
 
 
-- cd mern/frontend
-- docker build -t mern-frontend .
+- *cd mern/frontend*
+- *docker build -t frontend .*
 
 
 ### Run the client
 
-- docker run --name=frontend --network=demo -d -p 5173:5173 mern-frontend
+- *docker run --name=frontend --network=mern_network -d -p 5173:5173 frontend*
 
 ### Verify the client is running
 
@@ -40,24 +40,24 @@ Open your browser and type `http://localhost:5173`
 
 ### Run the mongodb container
 
-- docker run --network=demo --name mongodb -d -p 27017:27017 -v ~/opt/data:/data/db mongo:latest
+- *docker run --network=mern_network --name mongodb -d -p 27017:27017 -v ~/opt/data:/data/db mongo:latest*
 
 ### Build the server
 
 
 - *cd mern/backend*
-- _docker build -t mern-backend . _
+- *docker build -t backend .*
 
 
 ### Run the server 
 
-- docker run --name=backend --network=demo -d -p 5050:5050 mern-backend
+- *docker run --name=backend --network=mern_network -d -p 5050:5050 backend*
 
 ## Using Docker Compose
 
-- docker compose up -d
+- *docker compose up -d*
 
 ## Stopping the Docker Compose
 
-- docker compose down
+- *docker compose down*
 
