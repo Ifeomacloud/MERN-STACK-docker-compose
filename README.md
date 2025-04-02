@@ -45,8 +45,8 @@ Open your browser and type `http://localhost:5173`
 ### Build the server
 
 
-- cd mern/backend
-- docker build -t mern-backend .
+- *cd mern/backend*
+- _docker build -t mern-backend . _
 
 
 ### Run the server 
